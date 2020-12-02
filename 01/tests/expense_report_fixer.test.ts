@@ -1,5 +1,5 @@
 import { assertStrictEquals } from "../../deps.ts";
-import {fix_expense_report_2, fix_expense_report_3} from "../src/expense_report_fixer.ts";
+import {fixExpenseReport2, fixExpenseReport3} from "../src/expense_report_fixer.ts";
 
 Deno.test("Example test from introduction (Part one)", () => {
   const input = (
@@ -11,9 +11,9 @@ Deno.test("Example test from introduction (Part one)", () => {
     '1456'
   ).split('\n').map((n: string): number => Number(n));
 
-  const expected_output = 514579;
+  const expectedOutput = 514579;
 
-  assertStrictEquals(fix_expense_report_2(input), expected_output);
+  assertStrictEquals(fixExpenseReport2(input), expectedOutput);
 });
 
 Deno.test("Example test from introduction (Part two)", () => {
@@ -26,9 +26,9 @@ Deno.test("Example test from introduction (Part two)", () => {
     '1456'
   ).split('\n').map((n: string): number => Number(n));
 
-  const expected_output = 241861950;
+  const expectedOutput = 241861950;
 
-  assertStrictEquals(fix_expense_report_3(input), expected_output);
+  assertStrictEquals(fixExpenseReport3(input), expectedOutput);
 });
 
 Deno.test("Final test (Part one)", () => {
@@ -36,9 +36,9 @@ Deno.test("Final test (Part one)", () => {
     Deno.readTextFileSync("01/final_input.txt")
   ).split('\n').map((n: string): number => Number(n));
 
-  const expected_output = 545379;
+  const expectedOutput = 545379;
 
-  assertStrictEquals(fix_expense_report_2(input), expected_output);
+  assertStrictEquals(fixExpenseReport2(input), expectedOutput);
 });
 
 Deno.test("Final test (Part two)", () => {
@@ -46,7 +46,7 @@ Deno.test("Final test (Part two)", () => {
     Deno.readTextFileSync("01/final_input.txt")
   ).split('\n').map((n: string): number => Number(n));
 
-  const expected_output = 257778836;
+  const expectedOutput = 257778836;
 
-  assertStrictEquals(fix_expense_report_3(input), expected_output);
+  assertStrictEquals(fixExpenseReport3(input), expectedOutput);
 });

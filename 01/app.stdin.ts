@@ -1,8 +1,8 @@
 import { readLines } from "../deps.ts";
 
-import {fix_expense_report_2, fix_expense_report_3} from "./src/expense_report_fixer.ts";
+import {fixExpenseReport2, fixExpenseReport3} from "./src/expense_report_fixer.ts";
 
-async function read_expenses(): Promise<number[]> {
+async function readExpenses(): Promise<number[]> {
   const expenses = [];
 
   for await (const line of readLines(Deno.stdin)) {
@@ -12,5 +12,5 @@ async function read_expenses(): Promise<number[]> {
   return expenses;
 }
 
-console.log(fix_expense_report_2(await read_expenses()));
-console.log(fix_expense_report_3(await read_expenses()));
+console.log(fixExpenseReport2(await readExpenses()));
+console.log(fixExpenseReport3(await readExpenses()));
