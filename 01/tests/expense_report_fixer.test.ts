@@ -1,7 +1,7 @@
 import { assertStrictEquals } from "../../deps.ts";
 import {fixExpenseReport2, fixExpenseReport3} from "../src/expense_report_fixer.ts";
 
-Deno.test("Example test from introduction (Part one)", () => {
+Deno.test("ExpenseReportFixer: Example test from introduction (Part one)", () => {
   const input = (
     '1721\n' +
     '979\n' +
@@ -16,7 +16,7 @@ Deno.test("Example test from introduction (Part one)", () => {
   assertStrictEquals(fixExpenseReport2(input), expectedOutput);
 });
 
-Deno.test("Example test from introduction (Part two)", () => {
+Deno.test("ExpenseReportFixer: Example test from introduction (Part two)", () => {
   const input = (
     '1721\n' +
     '979\n' +
@@ -31,7 +31,7 @@ Deno.test("Example test from introduction (Part two)", () => {
   assertStrictEquals(fixExpenseReport3(input), expectedOutput);
 });
 
-Deno.test("Final test (Part one)", () => {
+Deno.test("ExpenseReportFixer: Final test (Part one)", () => {
   const input = (
     Deno.readTextFileSync("01/final_input.txt")
   ).split('\n').map((n: string): number => Number(n));
@@ -41,7 +41,7 @@ Deno.test("Final test (Part one)", () => {
   assertStrictEquals(fixExpenseReport2(input), expectedOutput);
 });
 
-Deno.test("Final test (Part two)", () => {
+Deno.test("ExpenseReportFixer: Final test (Part two)", () => {
   const input = (
     Deno.readTextFileSync("01/final_input.txt")
   ).split('\n').map((n: string): number => Number(n));

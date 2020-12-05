@@ -45,7 +45,7 @@ Deno.test("PassportValidator: Example test from introduction (Part two)", () => 
   assertStrictEquals(countValidPassports(input, true), expectedOutput);
 });
 
-Deno.test("TreeFinder: Final test (Part one)", () => {
+Deno.test("PassportValidator: Final test (Part one)", () => {
   const input = (
       Deno.readTextFileSync("04/final_input.txt")
   );
@@ -56,7 +56,7 @@ Deno.test("TreeFinder: Final test (Part one)", () => {
 });
 
 
-Deno.test("TreeFinder: Final test (Part two)", () => {
+Deno.test("PassportValidator: Final test (Part two)", () => {
   const input = (
       Deno.readTextFileSync("04/final_input.txt")
   );
