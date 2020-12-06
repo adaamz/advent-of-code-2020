@@ -15,10 +15,8 @@ export function countUnitedAnswers(groups: string[]): number
     let sum = 0;
 
     for (const group of groups) {
-        const peopleAnswers = group.split("\n").map(group => group.split(""));
-        const sameAnswers = peopleAnswers.reduce((prev, value): string[] => {
-            return intersect(prev, value);
-        }, peopleAnswers[0]);
+        const peopleAnswers = group.split("\n").map(g => g.split(""));
+        const sameAnswers = peopleAnswers.reduce(intersect, peopleAnswers[0]);
 
         sum += sameAnswers.length;
     }
