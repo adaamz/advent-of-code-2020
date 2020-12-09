@@ -2,7 +2,7 @@ export function countPart1(input: number[], preambleSize: number): number
 {
     // skip first $preambleSize
     for (let i = preambleSize; i < input.length; i++) {
-        if (!isValid(input, Math.max(i - preambleSize, 0), i)) {
+        if (!isValid(input, i - preambleSize, i)) {
             return input[i];
         }
     }
