@@ -1,7 +1,7 @@
 import { assertStrictEquals } from "../../deps.ts";
 import { countPart1, countPart2 } from "../src/08.ts";
 
-Deno.test("ABC: Example test from introduction (Part one)", () => {
+Deno.test("HandheldHalting: Example test from introduction (Part one)", () => {
   const input = (
     "nop +0\n" +
     "acc +1\n" +
@@ -18,7 +18,7 @@ Deno.test("ABC: Example test from introduction (Part one)", () => {
   assertStrictEquals(countPart1(input), expectedOutput);
 });
 
-Deno.test("ABC: Final test (Part one)", () => {
+Deno.test("HandheldHalting: Final test (Part one)", () => {
   const input = (
     Deno.readTextFileSync("08/final_input.txt").trimEnd()
   ).split("\n");
@@ -28,7 +28,7 @@ Deno.test("ABC: Final test (Part one)", () => {
   assertStrictEquals(countPart1(input), expectedOutput);
 });
 
-Deno.test("ABC: Example test from introduction (Part two)", () => {
+Deno.test("HandheldHalting: Example test from introduction (Part two)", () => {
   const input = (
     "nop +0\n" +
     "acc +1\n" +
@@ -46,7 +46,7 @@ Deno.test("ABC: Example test from introduction (Part two)", () => {
   assertStrictEquals(countPart2(input), expectedOutput);
 });
 
-Deno.test("ABC: Final test (Part two)", () => {
+Deno.test("HandheldHalting: Final test (Part two)", () => {
   const input = (
     Deno.readTextFileSync("08/final_input.txt").trimEnd()
   ).split("\n");
