@@ -41,8 +41,8 @@ function isValid(numbers: number[], start: number, stop: number): boolean
 {
     const actual = numbers[stop];
 
-    for (let i = start; i < stop; i++) {
-        for (let j = i + 1; j <= stop; j++) {
+    for (let i = start; i <= stop; i++) {
+        for (let j = i + 1; j < stop; j++) {
             if (numbers[i] + numbers[j] === actual) {
                 return true;
             }
