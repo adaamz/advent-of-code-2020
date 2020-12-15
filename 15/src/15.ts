@@ -5,23 +5,28 @@ export function countPart1(input: number[]): number
 
 export function countPart2(input: number[]): number
 {
-    // 6 minutes in Node :O
-    // 144s in Deno :O
+    // Object
+    // 6 minutes in Node (using Object) :O
+    // 144s in Deno (using Object) :O
+
+    // Map
+    // 6 seconds in Node (using Map)
+    // 5 seconds in Deno (using Map)
     return calculateNth(input, 30000000);
 }
 
 function calculateNth(input: number[], nth: number) {
     const start = new Date();
     let previousNumber = input[input.length - 1];
-    const indexes: {[index: number]: number} = {};
+    const indexes = new Map<number, number>();
 
     for (let i = 0; i < input.length - 1; i++) {
-        indexes[input[i]] = i + 1;
+        indexes.set(input[i], i + 1);
     }
 
     for (let i = input.length; i < nth; i++) {
-        const previousPosition = indexes[previousNumber];
-        indexes[previousNumber] = i;
+        const previousPosition = indexes.get(previousNumber);
+        indexes.set(previousNumber, i);
 
         if (previousPosition === undefined) {
             previousNumber = 0;
